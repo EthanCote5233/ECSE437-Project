@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using KannotEven.Models;
 
 namespace KannotEven.Data
 {
@@ -12,5 +13,6 @@ namespace KannotEven.Data
             : base(options)
         {
         }
+        public DbSet<KannotEven.Models.Recipe> Recipe { get; set; }
     }
 }
