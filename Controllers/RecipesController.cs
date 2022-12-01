@@ -25,6 +25,12 @@ namespace KannotEven.Controllers
             return View(await _context.Recipe.ToListAsync());
         }
 
+        // GET: Random Recipe
+        public async Task<IActionResult> Random()
+        {
+            return View(await _context.Recipe.FromSqlRaw("SELECT * FROM Recipe ORDER BY RAND() LIMIT 1").ToListAsync());
+        }
+
         // GET: Recipes/Details/5
         public async Task<IActionResult> Details(string id)
         {
