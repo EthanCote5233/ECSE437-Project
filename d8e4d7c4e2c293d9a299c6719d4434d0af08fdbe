@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c93842ca_82f81d58",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1020589
+      },
+      "writtenOn": "2022-12-02T01:48:00Z",
+      "side": 1,
+      "message": "Changes look good, like the removal of cognitive complexity related to await statement",
+      "revId": "d8e4d7c4e2c293d9a299c6719d4434d0af08fdbe",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
