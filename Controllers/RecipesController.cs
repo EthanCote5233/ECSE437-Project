@@ -26,9 +26,10 @@ namespace KannotEven.Controllers
         }
 
         // GET: Random Recipe
-        public async Task<IActionResult> Random()
+        public async Task<IActionResult> Random()      
         {
-            return View(await _context.Recipe.FromSqlRaw("SELECT * FROM Recipe ORDER BY RAND() LIMIT 1").ToListAsync());
+            Random rand = new Random();
+            return View(_context.Recipe.OrderBy(r => r.Name).Skip(rand.Next(_context.Recipe.Count())).Take(1));     
         }
 
         // GET: Recipes/Details/5
