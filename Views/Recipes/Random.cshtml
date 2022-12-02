@@ -1,0 +1,22 @@
+﻿@model IEnumerable<KannotEven.Models.Recipe>
+
+@{
+    ViewData["Title"] = "Random";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>                     
+        </tr>
+}
+    </tbody>
+</table>
