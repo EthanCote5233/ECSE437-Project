@@ -3,8 +3,8 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">KannotEven</h1>
-    <h5 class="quiet-text">Make your fridge work for you</h5><br />
+	<h1 class="display-4">KannotEven</h1>
+	<h5 class="quiet-text">Make your fridge work for you</h5><br />
 
 	<div>
 		<h3>Kannot Decide?</h3>
@@ -12,7 +12,11 @@
 			<input type="button" class="btn btn-primary" value="Feeling Hungry" />
 		</a><br /><br />
 	</div>
-    
 
-    <h3>Enter your ingredients below as a comma separated list <span class="hint-text">(e.g. tomato,onion,chicken)</span></h3>
+
+	<h3>Enter your ingredients below as a comma separated list <span class="hint-text">(e.g. tomato,onion,chicken)</span></h3>
+	<input type="text" placeholder="add your ingredients here!" />
+	<a asp-controller="Recipes" asp-action="GetList">
+		<input asp-for="List" type="button" class="btn btn-primary" value="Find me a recipe!" />
+	</a><br />
 </div>

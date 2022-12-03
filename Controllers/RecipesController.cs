@@ -32,6 +32,17 @@ namespace KannotEven.Controllers
             return View(_context.Recipe.OrderBy(r => r.Name).Skip(rand.Next(_context.Recipe.Count())).Take(1));     
         }
 
+        public async Task<IActionResult> GetList([Bind("List")] IngredientList ingredientList)
+        {
+            if (ModelState.IsValid)
+            {
+                Console.Error.WriteLine($"Ingredient list given: {ingredientList.List}");
+                return RedirectToAction(nameof(Index));
+            }
+            Console.Error.WriteLine($"Ingredient list model invalid");
+            return RedirectToAction(nameof(Index));
+        }
+
         // GET: Recipes/Details/5
         public async Task<IActionResult> Details(string id)
         {
