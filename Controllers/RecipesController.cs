@@ -36,7 +36,7 @@ namespace KannotEven.Controllers
         {
             if (ModelState.IsValid)
             {
-                Console.Error.WriteLine($"Ingredient list given: {ingredientList.List}");
+                Console.Error.WriteLine($"Ingredient list given: {ingredientList.List}\nCount: {ingredientList.Ingredients.Count}");
                 return RedirectToAction(nameof(Index));
             }
             Console.Error.WriteLine($"Ingredient list model invalid");

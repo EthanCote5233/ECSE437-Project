@@ -10,13 +10,25 @@ namespace KannotEven.Models
 	{
 		public string List { get; set; }
 
+		private List<Ingredient> cachedList;
 		public List<Ingredient> Ingredients
 		{
 			get
 			{
-				List<Ingredient> ingredients = new List<Ingredient>();
+				if (cachedList != null)
+				{
+					return cachedList;
+				}
+				HashSet<Ingredient> ingredients = new HashSet<Ingredient>();
 
-				return ingredients;
+				foreach (string str in List.Split(',', StringSplitOptions.RemoveEmptyEntries))
+				{
+					ingredients.Add(new Ingredient() { Name = str });
+				}
+
+				cachedList = ingredients.ToList();
+
+				return cachedList;
 			}
 		}
 	}
