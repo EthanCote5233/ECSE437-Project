@@ -32,7 +32,7 @@ namespace KannotEven.Controllers
             return View(_context.Recipe.OrderBy(r => r.Name).Skip(rand.Next(_context.Recipe.Count())).Take(1));     
         }
 
-        public async Task<IActionResult> GetList([Bind("List")] IngredientList ingredientList)
+        public async Task<IActionResult> GetList(IngredientList ingredientList)
         {
             if (ModelState.IsValid)
             {
