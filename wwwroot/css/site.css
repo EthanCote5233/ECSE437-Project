@@ -24,6 +24,17 @@ a {
   border-color: #1861ac;
 }
 
+.quiet-text {
+  color: dimgrey;
+  font-style: italic;
+}
+
+.hint-text {
+    color: dimgrey;
+    font-style: italic;
+    font-size: 60%;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
