@@ -13,6 +13,18 @@ namespace KannotEven
     {
         public static void Main(string[] args)
         {
+            Data.ApplicationDbContext context = new Data.ApplicationDbContext(60);
+
+            try
+            {
+                context.Database.EnsureDeleted();
+                context.Database.EnsureCreated();
+            }
+            catch (InvalidOperationException)
+            {
+                Console.WriteLine("LOGIN EXCEPTION");
+            }
+
             CreateHostBuilder(args).Build().Run();
         }
 
