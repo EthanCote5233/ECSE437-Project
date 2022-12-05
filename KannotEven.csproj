@@ -6,8 +6,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Data\Migrations\20221130191524_init.cs" />
-    <Compile Remove="Data\Migrations\20221130191524_init.Designer.cs" />
+    <Compile Remove="Data\Migrations\20221206001843_Init.cs" />
+    <Compile Remove="Data\Migrations\20221206001843_Init.Designer.cs" />
+    <Compile Remove="Data\Migrations\20221206012556_Seed.cs" />
+    <Compile Remove="Data\Migrations\20221206012556_Seed.Designer.cs" />
+    <Compile Remove="Data\Migrations\20221206013310_Seed.cs" />
+    <Compile Remove="Data\Migrations\20221206013310_Seed.Designer.cs" />
+    <Compile Remove="Data\Migrations\20221206021846_Seed.cs" />
+    <Compile Remove="Data\Migrations\20221206021846_Seed.Designer.cs" />
+    <Compile Remove="Data\Migrations\20221206021958_Seed.cs" />
+    <Compile Remove="Data\Migrations\20221206021958_Seed.Designer.cs" />
+    <Compile Remove="Data\Migrations\20221206022332_seed.cs" />
+    <Compile Remove="Data\Migrations\20221206022332_seed.Designer.cs" />
+    <Compile Remove="Data\Migrations\20221206023823_Seed.cs" />
+    <Compile Remove="Data\Migrations\20221206023823_Seed.Designer.cs" />
+    <Compile Remove="Data\Migrations\20221206023929_Seed.cs" />
+    <Compile Remove="Data\Migrations\20221206023929_Seed.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

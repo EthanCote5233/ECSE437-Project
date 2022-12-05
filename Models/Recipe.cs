@@ -10,11 +10,14 @@ namespace KannotEven.Models
     {       
         [Key]
         public String Name { get; set; }
-        public List<Ingredient> Ingredients { get; set; }
+        public String URL { get; set; }
+
+        //Nav Properties
+        public List<Recipe_Ingredient> Recipe_Ingredients { get; set; }
 
         public Recipe()
         {
-           
+            Recipe_Ingredients = new List<Recipe_Ingredient>();
         }
     }
 }
