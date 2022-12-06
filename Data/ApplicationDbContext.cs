@@ -9,7 +9,7 @@ namespace KannotEven.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        private int NumSeedIngredients = 60;
+        private int NumSeedIngredients = 9;
         public DbSet<Recipe> Recipe { get; set; }
         public DbSet<Ingredient> Ingredient { get; set; }
         public DbSet<Recipe_Ingredient> Recipes_Ingredient { get; set; }
@@ -40,17 +40,6 @@ namespace KannotEven.Data
                 WithMany(b => b.Recipe_Ingredients).
                 HasForeignKey(c => c.IngredientName);
 
-            /*
-            Recipe recipe = new Recipe { Name = "R1", URL = "url1" };
-            Ingredient ingredient = new Ingredient { Name = "I1" };
-
-            
-            modelBuilder.Entity<Recipe>().HasData(recipe);
-            modelBuilder.Entity<Ingredient>().HasData(ingredient);
-            modelBuilder.Entity<Recipe_Ingredient>().HasData(new Recipe_Ingredient { Id = 1, 
-            IngredientName = ingredient.Name});
-            */
-
             
             Queue<Ingredient> allIngredients = new Queue<Ingredient>();
             Queue<Recipe> allRecipes = new Queue<Recipe>();
@@ -75,7 +64,7 @@ namespace KannotEven.Data
                 allRecipes.Enqueue(recipe);
             }
 
-            for (int i = 0; i < NumSeedIngredients; i++)
+            for (int i = 1; i <= NumSeedIngredients; i++)
             {
                 Recipe recipe = new Recipe();
                 try

@@ -55,6 +55,48 @@ namespace KannotEven.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Ingredient",
+                column: "Name",
+                values: new object[]
+                {
+                    "I0",
+                    "I1",
+                    "I2",
+                    "I3",
+                    "I4",
+                    "I5",
+                    "I6",
+                    "I7",
+                    "I8"
+                });
+
+            migrationBuilder.InsertData(
+                table: "Recipe",
+                columns: new[] { "Name", "URL" },
+                values: new object[,]
+                {
+                    { "R0", "www.test0.com" },
+                    { "R1", "www.test1.com" },
+                    { "R2", "www.test2.com" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Recipes_Ingredient",
+                columns: new[] { "Id", "IngredientName", "RecipeName" },
+                values: new object[,]
+                {
+                    { 2, "I0", "R0" },
+                    { 3, "I1", "R0" },
+                    { 4, "I2", "R0" },
+                    { 5, "I3", "R1" },
+                    { 6, "I4", "R1" },
+                    { 7, "I5", "R1" },
+                    { 8, "I6", "R2" },
+                    { 9, "I7", "R2" },
+                    { 10, "I8", "R2" }
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Recipes_Ingredient_IngredientName",
                 table: "Recipes_Ingredient",

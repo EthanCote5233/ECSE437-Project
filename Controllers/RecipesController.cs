@@ -22,6 +22,11 @@ namespace KannotEven.Controllers
         // GET: Recipes
         public async Task<IActionResult> Index()
         {
+            Recipe r = _context.Recipe.Find("R10");
+
+            if (r != null) Console.WriteLine(r.Name + " " + r.URL);
+            else Console.WriteLine("PROBLEM PROBLEM"); 
+
             return View(await _context.Recipe.ToListAsync());
         }
 
