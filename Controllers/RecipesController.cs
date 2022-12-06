@@ -38,14 +38,34 @@ namespace KannotEven.Controllers
         }
 
         public async Task<IActionResult> GetList(IngredientList ingredientList)
-        {
-            if (ModelState.IsValid)
+        {           
+            List < Recipe > prunedRecipes = new List<Recipe>();
+            List<Recipe> recipes = _context.Recipe.Include(r => r.Recipe_Ingredients).ThenInclude(ri => ri.Ingredient).ToList();
+                     
+            foreach (Recipe recipe in recipes)
             {
-                Console.Error.WriteLine($"Ingredient list given: {ingredientList.List}\nCount: {ingredientList.Ingredients.Count}");
-                return RedirectToAction(nameof(Index));
+                int iTotal = 0;
+                int iMatched = 0;             
+
+                foreach (Recipe_Ingredient recipe_ingredient in recipe.Recipe_Ingredients)
+                {
+                    iTotal++;               
+
+                    foreach (Ingredient ingredient in ingredientList.Ingredients)
+                    {
+                        if (ingredient.Name.Equals(recipe_ingredient.Ingredient.Name)) iMatched++;
+                    }
+                }
+
+                Console.WriteLine(iTotal);
+                Console.WriteLine(iMatched);
+
+                if (iTotal == iMatched) prunedRecipes.Add(recipe);
             }
-            Console.Error.WriteLine($"Ingredient list model invalid");
-            return RedirectToAction(nameof(Index));
+
+            Console.WriteLine(prunedRecipes.Count);
+
+            return View(prunedRecipes);
         }
 
         // GET: Recipes/Details/5
