@@ -6,26 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Data\Migrations\20221206001843_Init.cs" />
-    <Compile Remove="Data\Migrations\20221206001843_Init.Designer.cs" />
-    <Compile Remove="Data\Migrations\20221206002053_Init.cs" />
-    <Compile Remove="Data\Migrations\20221206002053_Init.Designer.cs" />
-    <Compile Remove="Data\Migrations\20221206012556_Seed.cs" />
-    <Compile Remove="Data\Migrations\20221206012556_Seed.Designer.cs" />
-    <Compile Remove="Data\Migrations\20221206013310_Seed.cs" />
-    <Compile Remove="Data\Migrations\20221206013310_Seed.Designer.cs" />
-    <Compile Remove="Data\Migrations\20221206021846_Seed.cs" />
-    <Compile Remove="Data\Migrations\20221206021846_Seed.Designer.cs" />
-    <Compile Remove="Data\Migrations\20221206021958_Seed.cs" />
-    <Compile Remove="Data\Migrations\20221206021958_Seed.Designer.cs" />
-    <Compile Remove="Data\Migrations\20221206022332_seed.cs" />
-    <Compile Remove="Data\Migrations\20221206022332_seed.Designer.cs" />
-    <Compile Remove="Data\Migrations\20221206023823_Seed.cs" />
-    <Compile Remove="Data\Migrations\20221206023823_Seed.Designer.cs" />
-    <Compile Remove="Data\Migrations\20221206023929_Seed.cs" />
-    <Compile Remove="Data\Migrations\20221206023929_Seed.Designer.cs" />
-    <Compile Remove="Data\Migrations\20221206024111_Seed.cs" />
-    <Compile Remove="Data\Migrations\20221206024111_Seed.Designer.cs" />
     <Compile Remove="Migrations\20221206025733_Init.cs" />
     <Compile Remove="Migrations\20221206025733_Init.Designer.cs" />
     <Compile Remove="Migrations\20221206030215_Seed.cs" />
@@ -49,7 +29,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\Migrations\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 
