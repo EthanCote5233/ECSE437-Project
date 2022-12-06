@@ -14,11 +14,6 @@ namespace KannotEven.Data
         public DbSet<Ingredient> Ingredient { get; set; }
         public DbSet<Recipe_Ingredient> Recipes_Ingredient { get; set; }
 
-        public ApplicationDbContext(int numSeedIngredients)
-        {
-            NumSeedIngredients = numSeedIngredients;
-        }
-
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
