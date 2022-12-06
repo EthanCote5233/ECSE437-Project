@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "19e0c53a_86ab1850",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1019863
+      },
+      "writtenOn": "2022-12-06T16:19:34Z",
+      "side": 1,
+      "message": "Looks good. You can now use seeding for database tests as well. ",
+      "revId": "2e5148a9bb94d4b185e7c41baa069969fc9d97b1",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
